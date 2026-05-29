@@ -1,0 +1,20 @@
+{
+  "name": "zhida-crisp-native-adapter",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Open-source Crisp adapter that forwards Crisp events to a ZHIDA Native gateway.",
+  "type": "module",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "dev": "npm run build && node dist/index.js",
+    "start": "node dist/index.js",
+    "test": "npm run build && node --test dist/*.test.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "typescript": "^5.7.2"
+  }
+}

@@ -1,0 +1,10 @@
+services:
+  crisp-adapter:
+    build: .
+    env_file:
+      - .env
+    ports:
+      - "8787:8787"
+    volumes:
+      - ./data:/app/data
+    restart: unless-stopped

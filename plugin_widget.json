@@ -1,0 +1,49 @@
+{
+  "version": "1.0",
+  "sections": [
+    {
+      "id": "ai_section",
+      "title": "AI Auto Reply",
+      "items": [
+        {
+          "id": "status",
+          "type": "data",
+          "value": {
+            "label": "AI Status",
+            "value": "{conversation.meta.data.ai_auto_reply_mode || 'auto'}",
+            "editable": false,
+            "immediate": false
+          }
+        },
+        {
+          "id": "enable_ai",
+          "type": "button",
+          "value": {
+            "type": "hook",
+            "label": "Enable AI",
+            "color": "green",
+            "data": {
+              "action": "session.ai_reply.toggle",
+              "enabled": true
+            },
+            "visible": true
+          }
+        },
+        {
+          "id": "disable_ai",
+          "type": "button",
+          "value": {
+            "type": "hook",
+            "label": "Disable AI",
+            "color": "red",
+            "data": {
+              "action": "session.ai_reply.toggle",
+              "enabled": false
+            },
+            "visible": true
+          }
+        }
+      ]
+    }
+  ]
+}
